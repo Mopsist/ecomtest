@@ -69,13 +69,6 @@ namespace EcomTest
             var hash = BitConverter.ToString(alg.Hash);
             Console.WriteLine(hash);
 
-            //Четвертый способ
-            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
-            {
-                rsa.PersistKeyInCsp = false;
-                
-                return rsa.SignData(data, HashAlgorithmName.SHA512, RSASignaturePadding.Pkcs1);
-            }
 
             Console.ReadLine();
         }
